@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Activate Account</title>
+
+ 
+  <link rel="stylesheet" href="bootstrap.min.css">
+
+  <style>
+    body {
+      background: #f3f3f3;
+      font-family: "Arial", sans-serif;
+    }
+.container{
+    background-color:#283776 ;
+      width: 80%;
+      max-width: 850px;
+      height: 600px;
+      margin: 60px auto;
+      padding: 50px 20px;
+      border-radius: 15px;
+      position: relative;
+}
+  
+    
+
+  
+   .logo{
+      position: absolute;
+      top: -0.000001px;
+      right: -0.000001px;
+      background: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+    }
+   
+    .form-box {
+      background: white;
+      height: 350px;
+      padding: 40px 30px;
+      border-radius: 20px;
+      width: 95%;
+      max-width: 850px;
+     position: relative;
+     margin: 150px auto;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        position: absolute;
+      top:-30px;
+    
+    }
+
+    .form-box h3 {
+      color: #283776;
+      font-weight: bold;
+      margin-bottom: 30px;
+      font-size: 22px;
+    }
+   a{
+        color:white;
+    }
+      a:hover{
+        color:white;
+        text-decoration: none;
+    }
+    .code-input {
+      width: 55px;
+      height: 55px;
+      border-radius: 10px;
+      border: none;
+      background: #f2f2f2;
+      margin: 0 5px;
+      font-size: 22px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .code-input:focus {
+      outline: none;
+      box-shadow: 0px 0px 5px #28377680;
+    }
+
+    .btn-verify {
+      background: #283776;
+      color: white;
+      border-radius: 25px;
+      width: 130px;
+      margin-top: 25px;
+    }
+
+    .account-text {
+      margin-top: 25px;
+      font-size: 14px;
+    }
+
+    .account-text a {
+      color: #283776;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="form-box">
+         <img  class="logo"  src="logo.png" alt="logo" style="height:60px;">
+      <h3>Activate Account</h3>
+
+      <div class="d-flex justify-content-center">
+        <input maxlength="1" class="code-input" id="c1">
+        <input maxlength="1" class="code-input" id="c2">
+        <input maxlength="1" class="code-input" id="c3">
+        <input maxlength="1" class="code-input" id="c4">
+        <input maxlength="1" class="code-input" id="c5">
+        <input maxlength="1" class="code-input" id="c6">
+      </div>
+
+      <button class="btn btn-verify"><a href="reset possword.html">verify</a></button>
+
+      <p class="account-text">
+        Have you an account? <a href="#">sign in</a>
+      </p>
+    </div>
+
+  </div>
+ 
+
+ 
+  <script src="jquery-3.5.1.slim.min.js"></script>
+  <script src="popper.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+
+  
+  <script>
+    const inputs = document.querySelectorAll(".code-input");
+
+    inputs.forEach((input, index) => {
+      input.addEventListener("input", () => {
+        if (input.value && index < inputs.length - 1) {
+          inputs[index + 1].focus();
+        }
+      });
+
+      input.addEventListener("keydown", (e) => {
+        if (e.key === "Backspace" && index > 0 && !input.value) {
+          inputs[index - 1].focus();
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

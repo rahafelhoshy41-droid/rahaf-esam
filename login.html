@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>مستشفى الحياة الذكية - تسجيل</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap');
+
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      display: flex;
+      width: 1000px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+   
+    .left {
+      width: 50%;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .left img {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .right {
+      width: 50%;
+      padding: 30px 40px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .logo img {
+      width: 55px;
+      height: 55px;
+    }
+
+    .logo-text {
+      text-align: right;
+    }
+
+    .logo-text h3 {
+      margin: 0;
+      color: #004aad;
+    }
+
+    .logo-text p {
+      margin: 0;
+      font-size: 12px;
+      color: #555;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    .input-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+     
+      
+    }
+
+    .input-box {
+      width: 43%;
+      margin-bottom: 9px;
+      border-radius: 25px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      outline: none;
+    }
+
+    input:focus, select:focus {
+      border-color: #4aa3ff;
+    }
+
+    label {
+      font-size: 13px;
+      color: #333;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .checkbox {
+      font-size: 13px;
+      margin-right:  2px;
+       display:flex;
+        float: right;
+    }
+
+    .checkbox input {
+      margin-right: 0px;
+      transform: scale(1.2)
+       
+    }
+
+    .checkbox a {
+      color: #4aa3ff;
+      text-decoration: none;
+      white-space: nowrap;
+     
+    }
+
+    .btn {
+      width: 100%;
+      background-color: #66b2ff;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 10px;
+      
+    }
+
+    .btn:hover {
+      background-color: #3399ff;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+
+    .footer span {
+      color: #d33;
+    }
+
+    .footer a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    @media (max-width: 900px) {
+      .card {
+        flex-direction: column;
+        width: 90%;
+      }
+
+      .left, .right {
+        width: 100%;
+      }
+
+      .left img {
+        max-width: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="card">
+      
+      <div class="left">
+        <img src="login.jpg" alt="family">
+      </div>
+
+   
+      <div class="right">
+        <div class="logo">
+          <div class="logo-text">
+            <h3>مستشفى الحياة الذكية</h3>
+            <p>SMART HAYAT HOSPITAL</p>
+          </div>
+          <img src="logo2.jpg" alt="logo">
+        </div>
+
+        <form>
+          <div class="input-group">
+            <div class="input-box">
+              <label>الاسم</label>
+              <input type="text" placeholder="أدخل الاسم">
+            </div>
+            <div class="input-box">
+              <label>اختر النوع</label>
+              <select>
+                <option>اختر النوع</option>
+                <option>ذكر</option>
+                <option>أنثى</option>
+              </select>
+            </div>
+
+            <div class="input-box">
+              <label>البريد الإلكتروني</label>
+              <input type="email" placeholder="example@mail.com">
+            </div>
+            <div class="input-box">
+              <label>رقم التليفون</label>
+              <input type="tel" placeholder="010xxxxxxxx">
+            </div>
+
+            <div class="input-box">
+              <label>المحافظة</label>
+              <input type="text" placeholder="اكتب المحافظة">
+            </div>
+            <div class="input-box">
+              <label>البلد</label>
+              <select>
+                <option>اختر البلد</option>
+                <option>مصر</option>
+                <option>السعودية</option>
+                <option>الكويت</option>
+                <option>الإمارات</option>
+              </select>
+            </div>
+
+            <div class="input-box">
+              <label>تاريخ الميلاد</label>
+              <input type="date">
+            </div>
+            <div class="input-box">
+              <label>كلمة المرور</label>
+              <input type="password" placeholder="">
+            </div>
+            <div class="input-box">
+              <label>تأكيد كلمة المرور</label>
+              <input type="password" placeholder="">
+            </div>
+          </div>
+
+          <div class="checkbox">
+            <input type="checkbox">أوافق
+            <a href="#">على الشروط</a> و <a href="#">سياسة الخصوصية</a>
+          </div>
+
+          <button class="btn">اشتراك</button>
+
+          <div class="footer">
+            <span>تريد المساعدة؟</span><br>
+            لديك حساب؟ <a href="#">تسجيل</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
