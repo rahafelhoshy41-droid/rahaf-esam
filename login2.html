@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+
+    
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+     /* .logo{ 
+      position: absolute;
+      bottom: -5px;
+     : -5px;
+      background: white;
+      border-radius: 20px;
+    }  */
+      .logo{
+        position: fixed;
+        right:399px;
+        
+      }
+    .container{
+           background:#233b76 ;
+            width: 95%;
+            max-width: 800px;
+            height: 800px;
+            margin: 90px auto;
+            padding: 50px 20px;
+            border-radius: 20px;
+           position: relative;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+        .login-container {
+            background: white;
+            width: 100%;
+            max-width: 750px;
+            margin: 120px auto;
+            padding: 40px 30px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .login-title {
+            font-size: 28px;
+            color: #233b76;
+            margin-bottom: 25px;
+            font-weight: bold;
+        }
+
+        .input-box {
+            width: 100%;
+            background: #f1f3f5;
+            border: none;
+            border-radius: 30px;
+            height: 50px;
+            padding-left: 20px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .forgot {
+            float: right;
+            margin-top: -15px;
+            margin-bottom: 20px;
+            color: #52b2db;
+            cursor: pointer;
+        }
+
+        .btn-login {
+            background: #233b76;
+            color: white;
+            width: 160px;
+            height: 45px;
+            border-radius: 25px;
+            font-size: 18px;
+            border: none;
+            transition: 0.3s;
+        }
+
+        .btn-login:hover {
+            background: #1a2d59;
+        }
+
+        .bottom-text {
+            color: white;
+            text-align: center;
+            margin-top: 25px;
+            font-size: 17px;
+        }
+
+        .bottom-text a {
+            color: #7cd2ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .top-logo {
+            text-align: right;
+            padding: 20px 30px 0 0;
+        }
+    </style>
+</head>
+
+<body>
+
+   
+    
+
+   <div class="container">
+    <div class="login-container">
+
+        <img class="logo" src="logo.png" width="230">
+        <h2 class="login-title">Log In</h2>
+
+        <input type="email" class="input-box" placeholder="Email">
+        <div class="forgot"><a href="forget password.html">forgot password</a></div>
+
+        <input type="password" class="input-box" placeholder="Password">
+
+        <button class="btn-login">Sign in</button>
+    </div>
+
+    <div class="bottom-text">
+        Don`t have an account ?  
+        <a href="#">Creat account</a>
+    </div>
+   </div>
+</body>
+</html>

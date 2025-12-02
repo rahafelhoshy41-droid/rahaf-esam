@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searching For Section</title>
+
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+    <style>
+        body {
+            background:white;
+            font-family: Arial, sans-serif;
+
+        }
+        .page{
+            background:#233b76 ;
+            width: 95%;
+            max-width: 1800px;
+             height: 1350px;
+            margin: 90px auto;
+            padding: 50px 20px;
+            border-radius: 20px;
+           position: relative;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+       
+.page2{
+    background-color: white;
+
+      padding: 40px 30px;
+      width: 90%;
+      max-width: 1600px;
+     margin: 150px auto;
+       position: absolute;
+      top:-50px;
+      right: 70px;
+      border-radius: 20px;
+      position:absolute;
+  left: 80px;
+       box-shadow: 0 0 15px rgb(12, 205, 235);
+}
+.logo{
+      position: absolute;
+      top: -0.000001px;
+      right: -0.000001px;
+      background: white;
+    
+      border-radius: 20px;
+    }
+
+        .header-title {
+            color: #233b76 ;
+            font-size: 24px;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        .search-box {
+            max-width: 350px;
+            margin: 10px auto 30px;
+         box-shadow: 0 0 15px #52b2db;
+
+        }
+
+        .circle-img {
+            width: 230px;
+            height: 230px;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+         .circle-img:hover{
+       transform: scale(1.07);
+       }
+
+        .section-title {
+            color:  #233b76;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 10px;
+            box-shadow: 0 0 10px  #233b76;
+        }
+      
+    </style>
+</head>
+
+<body>
+<div  class="page">
+   <div class="page2">
+
+    <div class="container text-center mt-3">
+        <img  class="logo"  src="logo.png" alt="logo" width="300">
+        <h3 class="header-title">Searching For Section</h3>
+    </div>
+
+  
+    <div class="search-box">
+        <input type="text" class="form-control" placeholder="search">
+    </div>
+
+   
+    <div class="container">
+        <div class="row justify-content-center">
+
+           
+            <div class="col-12 col-md-4 text-center mb-4">
+                <img src="mouth.jpg" class="circle-img" alt="">
+                <p class="section-title">mouth and teeth</p>
+            </div>
+
+            
+          
+              <div class="col-12 col-md-4 text-center mb-4">
+                <img src="orthopedic.jpg" class="circle-img" alt="">
+                <p class="section-title">Orthopedic</p>
+            </div>
+              <div class="col-12 col-md-4 text-center mb-4">
+                <img src="brain.jpg" class="circle-img" alt="">
+                <p class="section-title">brain and nerves</p>
+            </div>
+              <div class="col-12 col-md-4 text-center mb-4">
+                <img src="general surgery.jpg" class="circle-img" alt="">
+                <p class="section-title">general surgery</p>
+            </div>
+              <div class="col-12 col-md-4 text-center mb-4">
+                <img src="emrgency.jpg" class="circle-img" alt="">
+                <p class="section-title">emrgency</p>
+            </div>
+              <div class="col-12 col-md-4 text-center mb-4">
+                <img src="intensive.jpg" class="circle-img" alt="">
+                <p class="section-title">intensive care</p>
+            </div>
+              <div class="col-12 col-md-4 text-center mb-4">
+                <img src="laboratory.jpg" class="circle-img" alt="">
+                <p class="section-title">laboratory</p>
+            </div>
+              <div class="col-12 col-md-4 text-center mb-4">
+                <img src="clinical.jpg" class="circle-img" alt="">
+                <p class="section-title">clinical pharmacy</p>
+            </div>  <div class="col-12 col-md-4 text-center mb-4">
+                <img src="x-rays.jpg" class="circle-img" alt="">
+                <p class="section-title">x-rays</p>
+            </div>
+
+        </div>
+    </div>
+    </div>
+</div>
+<script>
+    const searchInput = document.querySelector(".search-box input");
+    const items = document.querySelectorAll(".col-12.col-md-4");
+
+    searchInput.addEventListener("input", function () {
+        let value = this.value.toLowerCase().trim();
+
+        items.forEach(item => {
+            let text = item.querySelector(".section-title").textContent.toLowerCase();
+
+            if (value === "") {
+                item.style.display = "block"; 
+            } 
+            else if (text.includes(value)) {
+                item.style.display = "block";
+            } 
+            else {
+                item.style.display = "none"; 
+            }
+        });
+    });
+</script>
+</body>
+</html>
